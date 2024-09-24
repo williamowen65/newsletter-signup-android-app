@@ -4,10 +4,10 @@
     "slug": "newsletter-signup-android-app-3",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/van2.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash2.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -16,12 +16,19 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "package": "com.williamowen65.artsignup3",
+        "foregroundImage": "./assets/splash2.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "clearCode": "1894",
+      "eas": {
+        "projectId": "546a6dd7-9c48-431f-a236-2a4edd6cfc99"
+      }
     }
   }
 }

@@ -1,0 +1,8 @@
+{
+    "type": "module",
+    "dependencies": {
+        "@google-cloud/functions-framework": "^3.0.0",
+        "js-md5": "^0.8.3",
+        "@mailchimp/mailchimp_marketing": "^3.0.80"
+    }
+}
