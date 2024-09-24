@@ -161,7 +161,7 @@ const SubscriptionQueue = () => {
 };
 
 function Card({ info, isOdd, sendEmails }) {
-    console.log(sendEmails);
+    // console.log(sendEmails);
 
     // console.log("ALERT", info);
     // const [isUploading, setIsUploading] = useState(false)

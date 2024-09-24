@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "newsletter-signup-android-app-3",
-    "slug": "newsletter-signup-android-app-3",
+    "name": "Newsletter Signups",
+    "slug": "art-signup-3",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/van2.png",
@@ -16,10 +16,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "package": "com.williamowen65.artsignup3",
         "foregroundImage": "./assets/splash2.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.williamowen65.artsignup3"
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -51,13 +51,13 @@ import { submitQueueAndClear } from "./store/subscriptionQueue";
 import Form from "./components/Forms/Form";
 import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 import { ActivityIndicator } from "react-native-paper";
+import { setShowHeader } from "./store/app";
 // import RNFS from 'react-native-fs'
 
 function NavigationStacks() {
     const dispatch = useDispatch();
     const Stack = createNativeStackNavigator();
-    const [showHeader, setShowHeader] =
-        useState(true);
+
     const drawer = useRef(null);
 
     const [value, setValue] = useState(null);
@@ -66,6 +66,9 @@ function NavigationStacks() {
     const [isFocus, setIsFocus] = useState(false);
     const { queue, eventName } = useSelector(
         (state) => state.subscriptionQueue
+    );
+    const { showHeader } = useSelector(
+        (state) => state.app
     );
 
     const [
@@ -83,7 +86,7 @@ function NavigationStacks() {
 
     useEffect(() => {
 
-        console.log({ eventName })
+        // console.log({ eventName })
     }, [eventName])
 
     BackHandler.addEventListener(
@@ -114,7 +117,7 @@ function NavigationStacks() {
 
 
     function sendEmailsAction() {
-        console.log("sendEmailsAction", { eventName })
+        // console.log("sendEmailsAction", { eventName })
         if (!eventName) {
             // show warning
             setFeedback("Submission requires an event tag")
@@ -125,7 +128,7 @@ function NavigationStacks() {
             setIsSubmitting(true)
 
             // get a the event name (the mailchimp tag)
-            console.log({ eventName })
+            // console.log({ eventName })
 
             //  Call a firebase function
             // Add emails to mail chimp
@@ -141,7 +144,7 @@ function NavigationStacks() {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
+                    // console.log(data)
                     // report success
                     setFeedback(`Success\nAdded: ${data.mailchimpResponse.new_members_count}\nUpdated: ${data.mailchimpResponse.updated_member_count}`)
                     setIsSubmitting(false)
@@ -291,9 +294,6 @@ function NavigationStacks() {
                                         if (
                                             passwordApproval
                                         ) {
-                                            console.log(
-                                                "pass word approved"
-                                            );
 
                                             dispatch(
                                                 setPasswordApprove(
@@ -397,9 +397,9 @@ function NavigationStacks() {
                                                             icon='remove-circle-outline'
                                                             label='Hide header'
                                                             onPress={() =>
-                                                                setShowHeader(
+                                                                dispatch(setShowHeader(
                                                                     !showHeader
-                                                                )
+                                                                ))
                                                             }
                                                         />
                                                     </View>

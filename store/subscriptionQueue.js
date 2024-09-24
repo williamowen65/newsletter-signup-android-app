@@ -58,7 +58,7 @@ const subscriptionQueueSlice = createSlice({
         },
         setQueue: (state, action) => {
             if (action.payload.length === 0) {
-                console.log("CLEARING");
+                // console.log("CLEARING");
                 AsyncStorage.clear();
             }
             state.queue = action.payload;
@@ -94,11 +94,11 @@ const subscriptionQueueSlice = createSlice({
         },
         updateQueue: (state, action) => {
             if (action.payload) {
-                console.log(
-                    "payload from updateQueue",
-                    action.payload,
-                    typeof action.payload
-                );
+                // console.log(
+                //     "payload from updateQueue",
+                //     action.payload,
+                //     typeof action.payload
+                // );
                 state.queue = state.queue.map(
                     (el) => {
                         if (
