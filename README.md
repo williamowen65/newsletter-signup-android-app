@@ -1,4 +1,4 @@
-<img src="Demo-2.gif" style="rotate:-90deg; transform: scale(2); width: 200px; margin: 150px">
+<img src="A Simple Android Application.gif" >
 
 This is an app I made for my mom, who needed a quick way to collect and submit newsletter sign-ups.  It was my first React Native application (Built with Expo). 
 
